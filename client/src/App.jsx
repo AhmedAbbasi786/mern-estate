@@ -9,6 +9,7 @@ import PrivateRoute from "./components/PrivateRoute"
 import CreateListing from "./pages/CreateListing"
 import UpdateListing from "./pages/UpdateListing"
 import Listing from "./pages/Listing"
+import Search from "./pages/Search"
 const App = () => {
   return (
   <BrowserRouter>
@@ -27,8 +28,12 @@ const App = () => {
     </Route>
     <Route path="/about" element = {<About/>} />
     <Route path='/listing/:listingId' element={<Listing />} />
+    <Route path='/search' element={<Search />} />
    
   </Routes>
+  <div style={{ color:"gray", position: 'fixed', bottom: '10px', width: '100%', textAlign: 'center' }}>
+      &copy; 2023 EnigmaTech
+    </div>
   </BrowserRouter>
   )
 }
