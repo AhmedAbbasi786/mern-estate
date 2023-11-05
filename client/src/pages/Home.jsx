@@ -40,6 +40,7 @@ export default function Home() {
         const data = await res.json();
         setSaleListings(data);
       } catch (error) {
+        // eslint-disable-next-line no-undef
         log(error);
       }
     };
@@ -64,7 +65,7 @@ export default function Home() {
           to={'/search'}
           className='text-xs sm:text-sm text-blue-800 font-bold hover:underline'
         >
-          Let's get started...
+          Lets get started...
         </Link>
       </div>
 
@@ -73,6 +74,7 @@ export default function Home() {
         {offerListings &&
           offerListings.length > 0 &&
           offerListings.map((listing) => (
+            // eslint-disable-next-line react/jsx-key
             <SwiperSlide>
               <div
                 style={{
